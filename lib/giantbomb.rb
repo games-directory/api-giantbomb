@@ -9,7 +9,17 @@ module GiantBomb
     require File.join(File.dirname(__FILE__), 'giantbomb', inc)
   end
 
-  ['game', 'platform', 'company', 'character', 'franchise', 'concept', 'review', 'object', 'location', 'person', 'video'].each do |inc|
+  c = ['character', 'company', 'concept']
+  f = ['franchise']
+  g = ['game']
+  l = ['location']
+  o = ['object']
+  p = ['person', 'platform']
+  r = ['review']
+  u = ['user_review']
+  v = ['video']
+
+  [c, f, g, l, o, p, r, u, v].flatten.each do |inc|
     require File.join(File.dirname(__FILE__), 'giantbomb', inc)
   end
 end
