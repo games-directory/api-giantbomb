@@ -1,6 +1,6 @@
 module GiantBomb
   class Promo < Resource
-    has_resource 'promo', plural: 'promos', id: '3005'
+    has_resource 'promo', plural: 'promos', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-28
     # http://www.giantbomb.com/api/documentation#toc-0-29

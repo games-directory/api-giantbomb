@@ -1,6 +1,6 @@
 module GiantBomb
   class Type < Resource
-    has_resource 'types', plural: nil, id: '3005'
+    has_resource 'types', plural: nil, id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-41
     #

@@ -1,6 +1,6 @@
 module GiantBomb
   class RatingBoard < Resource
-    has_resource 'rating_board', plural: 'rating_boards', id: '3005'
+    has_resource 'rating_board', plural: 'rating_boards', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-30
     # http://www.giantbomb.com/api/documentation#toc-0-31

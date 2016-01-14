@@ -1,6 +1,6 @@
 module GiantBomb
   class GameRating < Resource
-    has_resource 'game_rating', plural: 'game_ratings', id: '3005'
+    has_resource 'game_rating', plural: 'game_ratings', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-16
     # http://www.giantbomb.com/api/documentation#toc-0-17

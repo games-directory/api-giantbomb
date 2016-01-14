@@ -1,6 +1,6 @@
 module GiantBomb
   class Genre < Resource
-    has_resource 'genre', plural: 'genres', id: '3005'
+    has_resource 'genre', plural: 'genres', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-18
     # http://www.giantbomb.com/api/documentation#toc-0-19

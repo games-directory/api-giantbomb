@@ -1,6 +1,6 @@
 module GiantBomb
   class Theme < Resource
-    has_resource 'theme', plural: 'themes', id: '3005'
+    has_resource 'theme', plural: 'themes', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-39
     # http://www.giantbomb.com/api/documentation#toc-0-40

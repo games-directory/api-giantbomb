@@ -1,6 +1,6 @@
 module GiantBomb
   class Chat < Resource
-    has_resource 'chat', plural: 'chats', id: '3005'
+    has_resource 'chat', plural: 'chats', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-6
     # http://www.giantbomb.com/api/documentation#toc-0-7

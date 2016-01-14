@@ -1,6 +1,6 @@
 module GiantBomb
   class Accessory < Resource
-    has_resource 'accessory', plural: 'accessories', id: '3005'
+    has_resource 'accessory', plural: 'accessories', id: '3000'
 
     # http://www.giantbomb.com/api/documentation#toc-0-2
     # http://www.giantbomb.com/api/documentation#toc-0-3

@@ -1,6 +1,6 @@
 module GiantBomb
   class VideoType < Resource
-    has_resource 'video_type', plural: 'video_types', id: '3005'
+    has_resource 'video_type', plural: 'video_types', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-46
     # http://www.giantbomb.com/api/documentation#toc-0-47

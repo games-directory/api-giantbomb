@@ -1,6 +1,6 @@
 module GiantBomb
   class Release < Resource
-    has_resource 'release', plural: 'releases', id: '3005'
+    has_resource 'release', plural: 'releases', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-34
     # http://www.giantbomb.com/api/documentation#toc-0-35

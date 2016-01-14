@@ -1,6 +1,6 @@
 module GiantBomb
   class Region < Resource
-    has_resource 'region', plural: 'regions', id: '3005'
+    has_resource 'region', plural: 'regions', id: nil
 
     # http://www.giantbomb.com/api/documentation#toc-0-32
     # http://www.giantbomb.com/api/documentation#toc-0-33
