@@ -1,5 +1,5 @@
 module GiantBomb
-  class GameObject < Resource
+  class Object < Resource
     has_resource 'object', plural: 'objects', id: '3055'
 
     # http://www.giantbomb.com/api/documentation#toc-0-22
@@ -24,13 +24,11 @@ module GiantBomb
       :name,                   # Name of the object
       :objects,                # Other objects related to the object
       :people,                 # People related to the object
-      :platforms,              # Platforms related to the object
       :site_detail_url         # URL pointing to the object on Giant Bomb
     ]
 
     @@fields.each do |field|
       attr_accessor field
     end
-
   end
 end

@@ -50,6 +50,5 @@ module GiantBomb
     @@fields.each do |field|
       attr_accessor field
     end
-
   end
 end

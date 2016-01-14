@@ -10,7 +10,6 @@ module GiantBomb
       :api_detail_url,      # URL pointing to the person detail resource
       :birth_date,          # Date the person was born
       :characters,          # Characters related to the person
-      :companies,           # Companies the person has worked with
       :concepts,            # Concepts related to the person
       :country,             # Country the person resides in
       :date_added,          # Date the person was added to Giant Bomb
@@ -29,13 +28,11 @@ module GiantBomb
       :name,                # Name of the person
       :objects,             # Objects related to the person
       :people,              # Other people related to the person
-      :platforms,           # Platforms related to the person
       :site_detail_url      # URL pointing to the person on Giant Bomb
     ]
 
     @@fields.each do |field|
       attr_accessor field
     end
-
   end
 end
