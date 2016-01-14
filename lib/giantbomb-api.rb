@@ -1,5 +1,5 @@
-# require 'rubygems'
-# require 'httparty'
+require 'rubygems'
+require 'httparty'
 
 require 'giantbomb/version'
 

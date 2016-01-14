@@ -11,8 +11,10 @@ Gem::Specification.new do |g|
   g.email       = ["rob@robertsays.com", "pacMakaveli90@gmail.com"]
 
   g.homepage    = "http://rubygems.org/gems/giantbomb-api"
-  g.summary     = %q{A Ruby wrapper for the GiantBomb video game wiki API.}
-  g.description = %q{Provides a simple, easy to use interface for the Giant Bomb video game wiki API.}
+  g.summary     = %q{A Ruby wrapper for the GiantBomb API.}
+  g.description = %q{Provides a complete and simple Ruby interface to communicate with the GiantBomb' API}
+
+  g.license     = "MIT"
 
   g.add_dependency("httparty")
 

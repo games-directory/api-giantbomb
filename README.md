@@ -10,7 +10,7 @@ mostly everything :)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'giantbomb-api', '~> 1.5.7'
+gem 'giantbomb-api', '~> 1.5.19'
 ```
 
 And then execute:
@@ -30,67 +30,75 @@ GiantBomb::Api.key('API_KEY_HERE')
 
 ### Resources
 
-Current available resources:
-* Character
-* Company
-* Concept
-* Franchise
-* Game
-* Location
-* Object
-* Person
-* Platform
-* Review
-* User Review
-* Video
+The gem comprises of all GiantBomb public resources:
+* Accessory `GiantBomb::Accessory`
+* Character `GiantBomb::Character`
+* Chat `GiantBomb::Chat`
+* Company `GiantBomb::Company`
+* Concept `GiantBomb::Concept`
+* Franchise `GiantBomb::Franchise`
+* Game `GiantBomb::Game`
+* Game Rating `GiantBomb::GameRating`
+* Genre `GiantBomb::Genre`
+* Location `GiantBomb::Location`
+* Object `GiantBomb::Object`
+* Person `GiantBomb::Person`
+* Platform `GiantBomb::Platform`
+* Promo `GiantBomb::Promo`
+* Rating Board `GiantBomb::RatingBoard`
+* Region `GiantBomb::Region`
+* Release `GiantBomb::Release`
+* Review `GiantBomb::Review`
+* Theme `GiantBomb::Theme`
+* Type `GiantBomb::Type`
+* User Review `GiantBomb::UserReview`
+* Video `GiantBomb::Video`
+* Video Type `GiantBomb::VideoType`
 
-Planned resources in the very near future
-* Accessory
-* Chat
-* Game Rating
-* Genre
-* People
-* Promo
-* Rating Board
-* Region
-* Release
-* Theme
-* Types
-* Video Type
-
-Which will complement the full GiantBomb API and provide access to all of their
-API resources.
-
-All resources have access to `Resource#list` `Resource#detail` and `Resource#search`
+All resources have inherit `#list` `#detail` and `#search`
 
 ### Usage
 
-###### Finding a Game
+###### Finding a Resource
 
 ``` ruby
-game = GiantBomb::Game.detail(1)
-
-games = GiantBomb::Game.find('gta')
-games = GiantBomb::Game.list
+game = GiantBomb::Game.detail(49598)
+game.id => 49598
+game.name => "Need for Speed"
+game.deck => "Need for Speed attempts to reboot the franchise with a focus on nighttime street races, multiplayer action, police chases, and new ways for players to configure and tune their cars."
+game.franchises => [{"api_detail_url"=>"http://www.giantbomb.com/api/franchise/3025-483/", "id"=>483, "name"=>"Need for Speed", "site_detail_url"=>"http://www.giantbomb.com/need-for-speed/3025-483/"}]
+...
 ```
-
-###### Searching for Games
+###### Searching a Resource
 
 ``` ruby
 search = GiantBomb::Search.new
-search.query('gta')
-search.fetch
+
+search.offset(3)
+search.limit(50) # max 100
+search.resources('game')
+search.query('Need for Speed')
+
+search.fetch # excute query
+```
+or
+``` ruby
+GiantBomb::Search.new().query('Need for Speed').resources('game').offset(3).fetch
 ```
 
+###### Searching multiple Resources
+
 ``` ruby
-# Available filter methods
+GiantBomb::Search.new().query('Need for Speed').resources('game, franchise').offset(3).fetch
+```
 
-.limit(10)           # limits the number of returned resources
-.resources('game')   # determines the type of resource
-.fields('name,deck') # returns only the requested resources
-.offset(100)         # sets the offset
+###### Available filter methods
 
-# All filters are chainable!
+``` ruby
+.limit(10)            # limits the number of returned resources, max 100
+.resources('game')    # determines the type of resource, accepts multiple resources (eg: 'game, franchise, video')
+.fields('name, deck') # returns only the requested resources
+.offset(100)          # sets the offset
 ```
 
 ### Development
@@ -101,15 +109,12 @@ prompt that will allow you to experiment.
 
 ###### TODO
 
-* Add all resources available from: http://www.giantbomb.com/api/documentation
-* Create a proper documentation showcasing all available resources and how to use them
 * Tests
 
 ### Examples
 
 For more examples see [mygames.io](https://github.com/pacMakaveli/mygames.io),
-[games.directory](https://github.com/studio51/games.directory)
-for a live application
+[games.directory repo](https://github.com/studio51/games.directory) and [games.directory](games.directory) for a live application
 
 ## License
 
