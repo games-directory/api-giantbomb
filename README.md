@@ -1,16 +1,17 @@
 [![Gem Version](https://badge.fury.io/rb/giantbomb-api.svg)](https://badge.fury.io/rb/giantbomb-api)
+[![Code Climate](https://codeclimate.com/github/pacMakaveli/giantbomb/badges/gpa.svg)](https://codeclimate.com/github/pacMakaveli/giantbomb)
+[![Test Coverage](https://codeclimate.com/github/pacMakaveli/giantbomb/badges/coverage.svg)](https://codeclimate.com/github/pacMakaveli/giantbomb/coverage)
 
 ## A Ruby wrapper for the GiantBomb API
 
-All credits goes to [intelekshual](https://github.com/intelekshual) for creating
-mostly everything :)
+Project initially started by [intelekshual](https://github.com/intelekshual/giantbomb).
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'giantbomb-api', '~> 1.5.19'
+gem 'giantbomb-api', '~> 1.6.0'
 ```
 
 And then execute:
@@ -95,10 +96,11 @@ GiantBomb::Search.new().query('Need for Speed').resources('game, franchise').off
 ###### Available filter methods
 
 ``` ruby
-.limit(10)            # limits the number of returned resources, max 100
-.resources('game')    # determines the type of resource, accepts multiple resources (eg: 'game, franchise, video')
-.fields('name, deck') # returns only the requested resources
-.offset(100)          # sets the offset
+.limit(10)               # limits the number of returned resources, max 100
+.resources('game')       # determines the type of resource, accepts multiple resources (eg: 'game, franchise, video')
+.fields('name, deck')    # returns only the requested resources
+.offset(100)             # sets the offset
+.query('Need for Speed') # the query to search for
 ```
 
 ### Development
