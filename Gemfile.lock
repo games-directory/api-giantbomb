@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    giantbomb-api (1.5.7)
+    giantbomb-api (1.5.19)
       httparty
 
 GEM
