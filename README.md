@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/giantbomb-api.svg)](https://badge.fury.io/rb/giantbomb-api)
+
 ## A Ruby wrapper for the GiantBomb API
 
 All credits goes to [intelekshual](https://github.com/intelekshual) for creating
@@ -8,7 +10,7 @@ mostly everything :)
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'giantbomb'
+gem 'giantbomb-api', '~> 1.5.7'
 ```
 
 And then execute:
@@ -17,7 +19,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install giantbomb
+    $ gem install giantbomb-api
 
 In your Rails application, add your API key to:
 `config/initializers/giantbomb.rb`
@@ -35,9 +37,29 @@ Current available resources:
 * Franchise
 * Game
 * Location
+* Object
 * Person
 * Platform
+* Review
+* User Review
 * Video
+
+Planned resources in the very near future
+* Accessory
+* Chat
+* Game Rating
+* Genre
+* People
+* Promo
+* Rating Board
+* Region
+* Release
+* Theme
+* Types
+* Video Type
+
+Which will complement the full GiantBomb API and provide access to all of their
+API resources.
 
 All resources have access to `Resource#list` `Resource#detail` and `Resource#search`
 
@@ -85,7 +107,8 @@ prompt that will allow you to experiment.
 
 ### Examples
 
-For more examples see [mygames.io](https://github.com/pacMakaveli/mygames.io)
+For more examples see [mygames.io](https://github.com/pacMakaveli/mygames.io),
+[games.directory](https://github.com/studio51/games.directory)
 for a live application
 
 ## License
