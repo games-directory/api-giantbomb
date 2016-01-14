@@ -56,7 +56,7 @@ The gem comprises of all GiantBomb public resources:
 * Video `GiantBomb::Video`
 * Video Type `GiantBomb::VideoType`
 
-All resources have inherit `#list` `#detail` and `#search`
+All resources inherit `#list` `#detail` and `#search`
 
 ### Usage
 
@@ -116,7 +116,7 @@ prompt that will allow you to experiment.
 ### Examples
 
 For more examples see [mygames.io](https://github.com/pacMakaveli/mygames.io),
-[games.directory repo](https://github.com/studio51/games.directory) and [games.directory](games.directory) for a live application
+[games.directory repo](https://github.com/studio51/games.directory) and [games.directory](http://games.directory) for a live application
 
 ## License
 
