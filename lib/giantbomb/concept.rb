@@ -25,7 +25,6 @@ module GiantBomb
       :name,                        # Name of the concept
       :objects,                     # Objects related to the concept
       :people,                      # People related to the concept
-      :platforms,                   # Platforms related to the concept
       :related_concepts,            # Other concepts related to the concept
       :site_detail_url              # URL pointing to the concept on Giant Bomb
     ]
@@ -33,6 +32,5 @@ module GiantBomb
     @@fields.each do |field|
       attr_accessor field
     end
-
   end
 end

@@ -14,7 +14,7 @@ module GiantBomb
       :game,              # Game the user_review is for
       :reviewer,          # Name of the review's author
       :score,             # The score given to the game on a scale of 1 to 5
-      :site_detail_url,   # URL pointing to the user_review on Giant Bomb
+      :site_detail_url    # URL pointing to the user_review on Giant Bomb
     ]
 
     @@fields.each do |field|

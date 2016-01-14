@@ -20,7 +20,7 @@ module GiantBomb
       :online_support,    # Flag indicating whether the platform has online capabilities.
       :original_price,    # Initial price point of the platform.
       :release_date,      # Date of the platform
-      :site_detail_url,   # URL pointing to the platform on Giant Bomb.
+      :site_detail_url    # URL pointing to the platform on Giant Bomb.
     ]
 
     @@fields.each do |field|

@@ -28,7 +28,6 @@ module GiantBomb
       :name,                   # Name of the character
       :objects,                # Objects related to the character
       :people,                 # People who have worked with the character
-      :platforms,              # Platforms having a game the character has appeared in
       :real_name,              # Real name of the character
       :site_detail_url         # URL pointing to the character on Giant Bomb
     ]
