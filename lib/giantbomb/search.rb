@@ -104,7 +104,10 @@ module GiantBomb
     # @see http://api.giantbomb.com/documentation/#handling_responses
     def fetch_response
       options = @params.merge(Api.config)
+
+      response = Api.get(@resource)
       response = Api.get(@resource, query: options)
+      response.params
       response.to_hash
     end
 

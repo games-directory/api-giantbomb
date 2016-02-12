@@ -20,9 +20,11 @@ module GiantBomb
     end
 
     def self.detail(id, conditions={})
-      search = GiantBomb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/")
-      search.filter(conditions)
+      search = GiantBomb::Search.new()
+      # search = GiantBomb::Search.new("/#{self.endpoints[:singular]}/#{self.endpoint_id + id.to_s}/")
+      # search.filter(conditions)
       self.new(search.fetch)
+      puts 'hellos!'
     end
 
     def self.list(conditions={})

@@ -16,7 +16,7 @@ Gem::Specification.new do |g|
 
   g.license     = "MIT"
 
-  g.add_dependency("httparty")
+  # g.add_dependency("httparty")
 
   g.files         = `git ls-files`.split("\n")
   g.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
