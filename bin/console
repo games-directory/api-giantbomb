@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "giantbomb"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -10,5 +9,15 @@ require "giantbomb"
 # require "pry"
 # Pry.start
 
-require "irb"
+
+require 'irb'
+require 'irb/completion'
+require "giantbomb-api"
+
+def reload!
+  files = $LOADED_FEATURES.select { |feat| feat =~ /\/giantbomb\// }
+  files.each { |file| load file }
+end
+
 IRB.start
+
